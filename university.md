@@ -13,62 +13,61 @@
 
 ## Departments
 
-id:
-name:
-address:
-teachers:
-students:
-telephone:
-email:
+id:          PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
+name:        VARCHAR(50) NOTNULL
+address:     VARCHAR(50) NOTNULL
+teachers:    VARCHAR(50) NOTNULL
+students:    VARCHAR(50) NOTNULL
+telephone:   VARCHAR(15) NOTNULL
+email:       VARCHAR(50) NOTNULL UNIQUE
 
 ## Degrees
 
-id:
-name:
-language:
-exams_nr:
+id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
+name:       VARCHAR(50) NOTNULL
+language:   VARCHAR(5)  NULL DEFAULT("it_IT")
+exams_nr:   TINYINT NOTNULL
 
 ## Courses
 
-id:
-name:
-CFU:
-teachers:
-start_date:
-end_date:
+id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
+name:       VARCHAR(50) NOTNULL
+CFU:        TINYINT NOTNULL
+teachers:   VARCHAR(50) NOTNULL
+start_date: DATETIME NOTNULL
+end_date:   DATETIME NOTNULL
 
 ## Exams
 
-id:
+id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
 name:
 teacher:
-vote_id:
 date:
 
 ## Students
 
-id:
-name:
-lastname:
-birth_date:
-badge_number:
-votes:
-taxes_status:
+id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
+name:       VARCHAR(50) NOTNULL
+lastname:   VARCHAR(50) NOTNULL
+birth_date: 
+badge_number: VARCHAR(8) NOTNULL
+votes:        TINYINT
+taxes_status: 
 
 ## Vote
 
-id:
-name: 
-exam:
-passed:
+id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
+name:       VARCHAR(50) NOTNULL
+exam:       VARCHAR(50) NOTNULL
+passed:     
 
 ## Teachers
 
-id:
-name:
-lastname:
-telephone:
-email:
-course:
+id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
+name:       VARCHAR(50) NOTNULL
+lastname:   VARCHAR(50) NOTNULL
+telephone:  VARCHAR(15) NOTNULL
+email:      VARCHAR(50) NOTNULL UNIQUE
+course:     VARCHAR(50) NOTNULL
 
 
