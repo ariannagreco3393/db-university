@@ -34,8 +34,8 @@ id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
 name:       VARCHAR(50) NOTNULL
 CFU:        TINYINT NOTNULL
 teachers:   VARCHAR(50) NOTNULL
-start_date: DATETIME NOTNULL
-end_date:   DATETIME NOTNULL
+start_date: DATE NOTNULL
+end_date:   DATE NOTNULL
 
 ## Exams
 
@@ -49,10 +49,10 @@ date:
 id:         PK NOTNULL UNIQUE INDEX AUTOINCREMENTAL
 name:       VARCHAR(50) NOTNULL
 lastname:   VARCHAR(50) NOTNULL
-birth_date: 
-badge_number: VARCHAR(8) NOTNULL
+birth_date: DATE NOTNULL
+badge_number: VARCHAR(8) NOTNULL UNIQUE
 votes:        TINYINT
-taxes_status: 
+taxes_status: VARCHAR(15) NOTNULL
 
 ## Vote
 
